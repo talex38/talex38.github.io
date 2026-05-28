@@ -1,16 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+    <head>
         <meta charset="utf-8">
-        <title>My ITIS3135 Site</title>
+        <title>Travis Alexander | Personal Home Page</title>
 
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #260035;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+            p {
+                text-align: center;
+            }
+            header {
+                background-color: #ffffff;
+                color: rgb(29, 29, 29);
+                padding: 10px 0; 
+                text-align: center;
+            }
+            h1 {
+                margin: 0;
+                font-size: 2.5rem;
+            }
+            h2 {
+                color: #2980b9;
+                margin-top: 0;
+                text-align: center;
+            }
+            header p {
+                margin-top: 0px;
+                font-size: 1.2rem;
+            }
+            nav {
+                background-color: #333;
+                padding: 10px;
+                text-align: center;
+            }
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 15px;
+            }
+            nav a:hover {
+                text-decoration: underline;
+                color: #dfb0ff;
+            }
+            main {
+                max-width: 800px;
+                margin: 2rem auto;
+                padding: 0 20px;
+            }
+            main section {
+                background: #ffffff;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                margin-bottom: 2rem; 
+            }
+            main section:last-child {
+                margin-bottom: 0;
+            }
+            .column {
+                display: flex;
+                gap: 20px; 
+                margin-bottom: 2rem;
+            }
+            .column section {
+                flex: 1; 
+                margin-bottom: 0; 
+            }      
+            @media (max-width: 600px) {
+                .column {
+                    flex-direction: column;
+                }
+                .column section {
+                    margin-bottom: 2rem;
+                }
+                .column section:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .course-link {
+                display: block; 
+                width: fit-content; 
+                margin: 15px auto 0 auto; 
+                background-color: #2980b9;
+                color: #ffffff;
+                padding: 12px 24px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+            .course-link:hover {
+                background-color: #3498db;
+                color: #ffffff;
+            }
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+                margin-top: 2rem;
+            }
+            footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+            footer a:hover {
+                text-decoration: underline;
+                color: #dfb0ff;
+            }
+            .validators {
+                margin-top: 15px;
+            }
+        </style>
     </head>
-    <body>
-        This is the root of my website.<br>
-        <a href="itis3135/">Click to go to my ITIS3135 Site</a>
-
+<body>
+    <header>
+        <h1>Travis Alexander</h1>
+        <p>Aspiring Networking/IT Professional</p>
+    </header>
     
-    </body>
-</html>
+    <nav>
+        <a href="./">Home</a>
+        <a href="https://github.com/talex38">GitHub</a>
+        <a href="https://www.linkedin.com/in/travismalexander/">LinkedIn</a>
+        <a href="https://webpages.charlotte.edu/talexa38/">UNCC Webpage</a> 
+        <a href="https://talex38.github.io">GitHub.io</a> 
+    </nav>
 
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hi, I am Travis Alexander. I'm a Computer Science student at UNC Charlotte with a concentration in systems and networks. I am from Indian Trail, North Carolina. I am currently interning at South Piedmont Community College in their IT department. I spend most of my free time gaming on my PC.</p>
+        </section>
+
+        <div class="column">
+            <section>
+                <h2>Interests & Hobbies</h2>
+                <ul style="text-align: left;">
+                    <li>Playing Video Games</li>
+                    <li>Building PCs</li>
+                    <li>Anything Tech Related</li>
+                    <li>Spending time with family and friends</li>
+                    <li>Spending time with my dogs</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Current PC Setup</h2>
+                <ul style="text-align: left;">
+                    <li>AMD Ryzen 7 9800x3D</li>
+                    <li>ASUS ROG STRIX X870-A</li>
+                    <li>ASROCK 9070xt SteelLegend</li>
+                    <li>32GB DDR5 RAM</li> 
+                </ul>
+            </section>
+        </div>
+
+        <section>
+            <h2>Coursework</h2>
+            <p>ITIS 3135 Front-End Web App Development work is located at the link below:</p>
+            
+            <a href="itis3135/index.html" class="course-link">Access My ITIS 3135 Course Page</a>
+        </section>
+    </main>
+
+    <footer>
+
+        <p>Designed by <a href="https://github.com/talex38"> Travis Alexander</a> &copy; 2026</p>
+        
+        <div class="validators">
+            <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+                <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+            </a>
+        </div>
+
+        <script>
+            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        </script>
+    </footer>
+</body>
+</html>
