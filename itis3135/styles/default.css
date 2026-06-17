@@ -1,59 +1,79 @@
 :root {
-  --bg-color: #121212;
+    --bg-color: #121212;
     --text-color: #e0e0e0;
     --primary-color: #4da6ff;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --line-height: 1.6;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --line-height: 1.6;
 }
 
 html {
-  font-size: 16px;
-  scroll-behavior: smooth;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font-sans);
-  line-height: var(--line-height);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: var(--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0; 
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  font-weight: 700;
+h1 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+h2 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 p {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 a {
-  color: var(--primary-color);
-  text-decoration: none;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 a:visited {
-  color: #824dff;
+    color: #824dff;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 70%;
-  height: auto;
+header, footer, main {
+    text-align: center; 
 }
 
 .container {
-  width: 70%;
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 1rem;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto; 
 }
