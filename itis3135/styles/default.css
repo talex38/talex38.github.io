@@ -1,5 +1,6 @@
 :root {
     --bg-color: #121212;
+    --container-bg: #1e1e1e; 
     --text-color: #e0e0e0;
     --primary-color: #4da6ff;
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -19,6 +20,22 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0; 
+}
+
+header, footer {
+    text-align: center; 
+    padding: 1.5rem 1rem;
+}
+
+.container {
+    width: 85%;
+    max-width: 800px; 
+    margin: 2rem auto; 
+    padding: 2rem;
+    background-color: var(--container-bg); 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: left; 
 }
 
 h1 {
@@ -60,20 +77,9 @@ a:hover {
     text-decoration: underline;
 }
 
-header, footer, main {
-    text-align: center; 
-}
-
-.container {
-    width: 70%;
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 1rem;
-}
-
 img, picture, video, canvas, svg {
     display: block;
-    max-width: 70%;
+    max-width: 100%; 
     height: auto;
-    margin: 0 auto; 
+    margin: 1.5rem auto; 
 }
