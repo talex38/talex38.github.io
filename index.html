@@ -1,194 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Travis Alexander | Home</title>
 
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>Travis Alexander | Home</title>
 
-        <style>
-            :root {
-                --bg-color: #2b1b3d;          
-                --container-bg: #f5f2eb;      
-                --text-color: #1a1625;        
-                --header-bg: #1e132b;         
-                --light-text: #e8e4df;        
-                --accent-color: #1a5b82;      
-                --hover-color: #d194f6;       
-            }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 
-            body {
-                font-family: sans-serif;
-                background-color: var(--bg-color);
-                color: var(--text-color);
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-            }
+    <style>
+        :root {
+            --bg-color: #2b1b3d;
+            --container-bg: #f5f2eb;
+            --text-color: #1a1625;
+            --header-bg: #1e132b;
+            --light-text: #e8e4df;
+            --accent-color: #1a5b82;
+            --hover-color: #d194f6;
+        }
 
-            h1, h2, h3 {
-                font-family:sans-serif;
-                margin-top: 0;
-                margin-bottom: 0.25rem; 
-            }
+        body {
+            font-family: sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-            p, ul {
-                margin-top: 0; 
-                margin-bottom: 1.5rem;
-                text-align: left; 
-            }
+        /* Consolidated Heading Styles */
+        h1 {
+            font-family: sans-serif;
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+            font-size: 2.5rem;
+        }
 
-            header {
-                background-color: var(--container-bg);
-                color: var(--text-color);
-                padding: 15px 0; 
-                text-align: center;
-            }
+        h2 {
+            font-family: sans-serif;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            /* Adjusted to maintain your specific layout spacing */
+            color: var(--accent-color);
+            text-align: center;
+        }
 
-            h1 {
-                font-size: 2.5rem;
-            }
+        h3 {
+            font-family: sans-serif;
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+            color: var(--accent-color);
+            text-align: center;
+            font-size: 1.5rem;
+        }
 
-            h2 {
-                color: var(--accent-color);
-                text-align: center;
-                margin-bottom: 1.5rem;
-            }
+        p,
+        ul {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
 
-            h3 {
-                color: var(--accent-color);
-                text-align: center;
-                font-size: 1.5rem;
-            }
+        header {
+            background-color: var(--container-bg);
+            color: var(--text-color);
+            padding: 15px 0;
+            text-align: center;
+        }
 
-            nav {
-                background-color: var(--header-bg);
-                padding: 15px;
-                text-align: center;
-            }
+        nav {
+            background-color: var(--header-bg);
+            padding: 15px;
+            text-align: center;
+        }
 
-            nav a {
-                color: var(--light-text);
-                text-decoration: none;
-                margin: 0 15px;
-                font-weight: bold;
-            }
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-            nav a:hover {
-                text-decoration: underline;
-                color: var(--hover-color);
-            }
+        nav a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
 
-            main {
-                max-width: 800px;
-                margin: 2rem auto;
-                padding: 0 20px;
-            }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
 
-            main section {
-                background: var(--container-bg);
-                padding: 20px 20px 5px 20px; 
-                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-                border-radius: 8px;
-                margin-bottom: 2rem; 
-            }
+        main section {
+            background: var(--container-bg);
+            padding: 20px 20px 5px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
 
-            main section:last-child {
-                margin-bottom: 0;
-            }
+        main section:last-child {
+            margin-bottom: 0;
+        }
 
+        .column {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .column section {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
             .column {
-                display: flex;
-                gap: 20px; 
-                margin-bottom: 2rem;
+                flex-direction: column;
             }
 
             .column section {
-                flex: 1; 
-                margin-bottom: 0; 
-            }      
-
-            @media (max-width: 600px) {
-                .column {
-                    flex-direction: column;
-                }
-                .column section {
-                    margin-bottom: 2rem;
-                }
-                .column section:last-child {
-                    margin-bottom: 0;
-                }
+                margin-bottom: 2rem;
             }
 
-            a.course-link {
-                display: block; 
-                width: fit-content; 
-                margin: auto; 
-                margin-bottom: 1.5rem;
-                background-color: var(--accent-color);
-                color: var(--container-bg);
-                padding: 12px 24px;
-                text-decoration: none;
-                border-radius: 5px;
-                font-weight: bold;
-                transition: background-color 0.3s ease;
+            .column section:last-child {
+                margin-bottom: 0;
             }
+        }
 
-            a.course-link:hover {
-                background-color: #12405d; /* Darker blue on hover */
-                color: var(--container-bg);
-            }
+        a.course-link {
+            display: block;
+            width: fit-content;
+            margin: auto;
+            margin-bottom: 1.5rem;
+            background-color: var(--accent-color);
+            color: var(--container-bg);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
 
-            footer {
-                background-color: var(--header-bg);
-                color: var(--light-text);
-                text-align: center;
-                padding: 20px;
-                margin-top: 2rem;
-            }
+        a.course-link:hover {
+            background-color: #12405d;
+            /* Darker blue on hover */
+            color: var(--container-bg);
+        }
 
-            footer a {
-                color: var(--light-text);
-                text-decoration: underline;
-            }
+        footer {
+            background-color: var(--header-bg);
+            color: var(--light-text);
+            text-align: center;
+            padding: 20px;
+            margin-top: 2rem;
+        }
 
-            footer a:hover {
-                color: var(--hover-color);
-            }
+        footer a {
+            color: var(--light-text);
+            text-decoration: underline;
+        }
 
-            .validators {
-                margin-top: 15px;
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-            }
-        </style>
+        footer a:hover {
+            color: var(--hover-color);
+        }
 
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
+        .validators {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
     <header>
         <h1>Travis Alexander</h1>
     </header>
-    
+
     <nav>
         <a href="./">Home</a>
         <a href="https://github.com/talex38">GitHub</a>
         <a href="https://www.linkedin.com/in/travismalexander/">LinkedIn</a>
-        <a href="https://webpages.charlotte.edu/talexa38/">UNCC Webpage</a> 
-        <a href="https://talex38.github.io">GitHub.io</a> 
+        <a href="https://webpages.charlotte.edu/talexa38/">UNCC Webpage</a>
+        <a href="https://talex38.github.io">GitHub.io</a>
     </nav>
 
     <main>
-        <h2>Home</h2>
-        
+        <section>
+            <h2>Home</h2>
+        </section>
+
         <section>
             <h3>About Me</h3>
-            <p>Hi, I am Travis Alexander. I'm a Computer Science student at UNC Charlotte with a concentration in systems and networks. I am from Indian Trail, North Carolina. I am currently interning at South Piedmont Community College in their IT department. I spend most of my free time gaming on my PC.</p>
+            <p>Hi, I am Travis Alexander. I'm a Computer Science student at UNC Charlotte with a concentration in
+                systems and networks. I am from Indian Trail, North Carolina. I am currently interning at South Piedmont
+                Community College in their IT department. I spend most of my free time gaming on my PC.</p>
         </section>
 
         <div class="column">
@@ -209,7 +222,7 @@
                     <li>AMD Ryzen 7 9800x3D</li>
                     <li>ASUS ROG STRIX X870-A</li>
                     <li>ASROCK 9070xt SteelLegend</li>
-                    <li>32GB DDR5 RAM</li> 
+                    <li>32GB DDR5 RAM</li>
                 </ul>
             </section>
         </div>
@@ -223,13 +236,15 @@
     <footer>
         <p><em>"Aspiring Networking and IT Professional focusing on Systems and Networks"</em></p>
         <p>Designed by <a href="talexdesigns.org/index.html">Talex Designs</a> &copy; 2026</p>
-         
+
         <div class="validators">
             <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-                <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
             </a>
             <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!">
             </a>
         </div>
 
@@ -239,4 +254,5 @@
         </script>
     </footer>
 </body>
+
 </html>
