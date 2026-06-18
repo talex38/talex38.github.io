@@ -7,10 +7,6 @@
     --line-height: 1.6;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -35,7 +31,6 @@ header, footer {
     width: 85%;
     max-width: 800px; 
     margin: 2rem auto; 
-    padding: 2rem;
     background-color: var(--container-bg); 
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
