@@ -4,97 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travis Alexander | ITIS 3135 Survey</title>
+    <title>Travis Alexander's Tenacious Ant | ITIS3135 | Survey</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        form {
+            background-color: #2c2c2c;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            box-sizing: border-box;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            color: #e0e0e0;
+            margin-left: 0.5rem;
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #cc7a00;
+        }
+    </style>
 </head>
 
 <body>
-
-
-    <h1 id="title">Tenacious Ant Feedback Page</h1>
-    <p id="description">Let us know how we can improve upcoming events.</p>
-
-    <form id="survey-form">
-
-        <div>
-            <label id="name-label" for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
-        </div>
-
-        <div>
-            <label id="email-label" for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your preferred email" required />
-        </div>
-
-        <div>
-            <label id="number-label" for="number">Years of Industry Experience</label>
-            <input type="number" id="number" name="experience" min="0" max="50" placeholder="e.g., 2" />
-        </div>
-
-        <div>
-            <label for="dropdown">Which role best describes you?</label>
-            <select id="dropdown" name="role">
-                <option value="">Select your current role</option>
-                <option value="student">Computer Science Student</option>
-                <option value="network-engineer">Network Engineer</option>
-                <option value="full-stack">Full-Stack Developer</option>
-                <option value="ui-ux">UI/UX Designer</option>
-                <option value="hardware">Hardware Technician</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <div>
-            <p>How would you rate the keynote on the Right to Repair movement?</p>
-            <label>
-                <input type="radio" name="keynote-rating" value="excellent" />
-                Excellent
-            </label>
-            <label>
-                <input type="radio" name="keynote-rating" value="good" />
-                Good
-            </label>
-            <label>
-                <input type="radio" name="keynote-rating" value="needs-improvement" />
-                Needs Improvement
-            </label>
-        </div>
-
-        <div>
-            <p>Which workshop topics would you like to see more of next year? (Check all that apply)</p>
-            <label>
-                <input type="checkbox" name="topics" value="networking" />
-                Advanced Routing & Wireshark Analysis
-            </label><br>
-            <label>
-                <input type="checkbox" name="topics" value="react-node" />
-                Building Full-Stack Apps (MERN)
-            </label><br>
-            <label>
-                <input type="checkbox" name="topics" value="databases" />
-                Database Normalization & MongoDB
-            </label><br>
-            <label>
-                <input type="checkbox" name="topics" value="figma" />
-                Figma Prototyping
-            </label>
-        </div>
-
-        <div>
-            <p>Any additional comments or suggestions?</p>
-            <textarea id="comments" name="comments" rows="5" cols="40"
-                placeholder="Tell us what you thought..."></textarea>
-        </div>
-
-        <div>
-            <button type="submit" id="submit">Submit Feedback</button>
-        </div>
-
-    </form>
-
     <div data-include="components/header.html"></div>
-    <h2>Survey</h2>
+
+    <main class="container">
+        <h2>Colony Feedback Survey</h2>
+        <p id="description">Let us know how your new PC build is performing and how our worker ants did.</p>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Commander Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Pheromone Trail (Email)</label>
+                <input type="email" id="email" name="email" placeholder="Enter your preferred email" required />
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">System Uptime (Days since build)</label>
+                <input type="number" id="number" name="experience" min="0" max="5000" placeholder="e.g., 14" />
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">What type of build did you order?</label>
+                <select id="dropdown" name="role">
+                    <option value="">Select your build tier</option>
+                    <option value="scout">Scout Build (Entry Level Gaming)</option>
+                    <option value="worker">Worker Build (Mid-Tier / Productivity)</option>
+                    <option value="soldier">Soldier Build (High-End Gaming)</option>
+                    <option value="queen">Queen Build (Enthusiast / Rendering)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>How would you rate our cable routing (tunnel management)?</label>
+                <div class="radio-group"><input type="radio" id="exc" name="cable-rating" value="excellent" /> <label
+                        for="exc">Excellent</label></div>
+                <div class="radio-group"><input type="radio" id="good" name="cable-rating" value="good" /> <label
+                        for="good">Good</label></div>
+                <div class="radio-group"><input type="radio" id="needs" name="cable-rating" value="needs-improvement" />
+                    <label for="needs">Tangled like a spider web</label></div>
+            </div>
+
+            <div class="form-group">
+                <label>Which future colony upgrades are you interested in? (Check all that apply)</label>
+                <div class="checkbox-group"><input type="checkbox" id="t1" name="topics" value="cooling" /> <label
+                        for="t1">Subterranean Water Cooling</label></div>
+                <div class="checkbox-group"><input type="checkbox" id="t2" name="topics" value="ram" /> <label
+                        for="t2">More Foraging Memory (RAM)</label></div>
+                <div class="checkbox-group"><input type="checkbox" id="t3" name="topics" value="gpu" /> <label
+                        for="t3">Soldier Ant Upgrade (GPU)</label></div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Directives for the Queen</label>
+                <textarea id="comments" name="comments" rows="5"
+                    placeholder="Tell us what you thought of the build process..."></textarea>
+            </div>
+
+            <button type="submit" id="submit">Submit Feedback</button>
+        </form>
+    </main>
 
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>

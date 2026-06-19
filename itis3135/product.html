@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Alexander's Tenacious Ant | ITIS3135 | Product</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        #hero {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        #form {
+            margin-top: 1rem;
+        }
+
+        #email {
+            padding: 0.5rem;
+            width: 60%;
+            max-width: 300px;
+            background: #ffffff;
+            color: #111111;
+            border-radius: 4px;
+        }
+
+        #submit {
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .section-box {
+            background: #2c2c2c;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main class="container">
+        <section id="hero">
+            <h2>The Queen's Chamber - Pre-Built Masterpiece</h2>
+            <p>Experience the ultimate in computing power with our flagship pre-built PC.</p>
+            <form id="form" action="#">
+                <input type="email" id="email" name="email" placeholder="Join the colony waitlist..." required>
+                <input type="submit" id="submit" value="Notify Me">
+            </form>
+        </section>
+
+        <section id="features" class="section-box">
+            <h2>Colony Features</h2>
+            <ul>
+                <li><strong>Titanium Exoskeleton:</strong> Custom-milled aluminum chassis for ultimate protection.</li>
+                <li><strong>Pheromone Routing:</strong> Immaculate cable management invisible from the front window.
+                </li>
+                <li><strong>Sub-Zero Tunnels:</strong> A custom hardline water-cooling loop to keep the Queen CPU
+                    frosty.</li>
+            </ul>
+        </section>
+
+        <section id="how-it-works" class="section-box" style="text-align: center;">
+            <h2>How Our Ants Build It</h2>
+            <!--Stock image of a custom PC build -->
+            <img id="build-image"
+                src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Interior of a high-performance custom PC build with glowing lights"
+                style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; border: 2px solid var(--primary-color); display: block; margin: 0 auto;">
+        </section>
+
+        <section id="pricing" class="section-box">
+            <h2>Nectar Pricing Plans</h2>
+            <p><strong>The Scout:</strong> $999 - Great for 1080p foraging.</p>
+            <p><strong>The Soldier:</strong> $1,799 - Built for 1440p warfare.</p>
+            <p><strong>The Queen:</strong> $3,499 - 4K dominance and heavy rendering.</p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+
+</html>

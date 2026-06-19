@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Alexander's Tenacious Ant | ITIS3135 | Documentation</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        #navbar {
+            position: fixed;
+            top: 200px;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            border-right: 2px solid var(--primary-color);
+            background-color: var(--container-bg);
+            overflow-y: auto;
+        }
+
+        #navbar header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        #navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #navbar li {
+            border-top: 1px solid #444;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 15px;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        #main-doc {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .main-section header {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        code {
+            display: block;
+            background-color: #000;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid var(--primary-color);
+            font-family: monospace;
+            color: #56d364;
+        }
+
+        @media (max-width: 768px) {
+            #navbar {
+                position: static;
+                width: 100%;
+                height: auto;
+                border-bottom: 2px solid var(--primary-color);
+            }
+            #main-doc {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div data-include="components/header.html"></div>
+
+    <nav id="navbar">
+        <header>Ant Colony PC Builds</header>
+        <ul>
+            <li><a class="nav-link" href="#Colony_Hierarchy">Colony Hierarchy</a></li>
+            <li><a class="nav-link" href="#The_Exoskeleton">The Exoskeleton</a></li>
+            <li><a class="nav-link" href="#The_Queen_and_Soldiers">The Queen and Soldiers</a></li>
+            <li><a class="nav-link" href="#Foraging_for_Power">Foraging for Power</a></li>
+            <li><a class="nav-link" href="#Ventilation_Tunnels">Ventilation Tunnels</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        
+        <h2>Documentation</h2>
+        <h2>Build Guide</h2>
+
+        <section class="main-section" id="Colony_Hierarchy">
+            <header><h3>Colony Hierarchy</h3></header>
+            <p>Welcome to Travis's Tenacious Ant PC Building Co. Just like an ant colony relies on perfect synergy between its workers, a high-performance PC requires perfect hardware compatibility.</p>
+            <p>At the center of our technological anthill is the Motherboard. It acts as the pheromone trail, connecting every component and allowing data to communicate seamlessly.</p>
+            <code>install-motherboard --form-factor ATX</code>
+        </section>
+
+        <section class="main-section" id="The_Exoskeleton">
+            <header><h3>The Exoskeleton</h3></header>
+            <p>An ant's exoskeleton protects its vital organs from predators and the environment. In PC building, this is your chassis, or Case.</p>
+            <p>Choosing the right exoskeleton dictates how much room you have for expansion, how well air flows through the tunnels, and protects your components from dust and debris.</p>
+            <ul>
+                <li>Full Tower (The Queen's Chamber)</li>
+                <li>Mid Tower (The Worker's Hub)</li>
+                <li>Mini-ITX (The Scout's Pack)</li>
+            </ul>
+            <code>mount-chassis --protect-components true</code>
+        </section>
+
+        <section class="main-section" id="The_Queen_and_Soldiers">
+            <header><h3>The Queen and Soldiers</h3></header>
+            <p>The Central Processing Unit (CPU) is the Queen of the colony. She hands out instructions and ensures that every task is delegated rapidly to the rest of the system.</p>
+            <p>The Graphics Processing Unit (GPU) acts as your soldier ants. They do the heavy lifting, processing thousands of visual tasks simultaneously to render complex graphics and environments.</p>
+            <code>socket-cpu --thermal-paste "pea-sized-drop"</code>
+            <code>install-gpu --pcie-slot 1</code>
+        </section>
+
+        <section class="main-section" id="Foraging_for_Power">
+            <header><h3>Foraging for Power</h3></header>
+            <p>A colony without food will perish. The Power Supply Unit (PSU) is responsible for taking raw AC power and converting it into sweet, usable DC nectar for your components.</p>
+            <p>Always ensure your PSU has a high efficiency rating (80 Plus Gold or better) to prevent energy waste. Too little power, and the colony shuts down.</p>
+            <p>Cable management acts as your supply lines. Keep them tidy to prevent blockages!</p>
+            <code>connect-psu --wattage 850w --modular true</code>
+        </section>
+
+        <section class="main-section" id="Ventilation_Tunnels">
+            <header><h3>Ventilation Tunnels</h3></header>
+            <p>Deep underground, ants build intricate ventilation shafts to keep the colony cool. Your PC requires the exact same attention to thermal dynamics.</p>
+            <p>Using a combination of intake and exhaust fans, you must create positive or neutral air pressure. Heat sinks and liquid AIO coolers draw heat away from the Queen (CPU) before exhausting it into the wild.</p>
+            <p>Watch out for dust buildup blocking your tunnels!</p>
+            <code>configure-fans --intake front --exhaust rear</code>
+        </section>
+
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>
