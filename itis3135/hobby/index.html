@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Gaming</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png">
+
+    <style>
+       
+        :root {
+            --bg-color: #0d1117; 
+            --text-color: #c9d1d9; 
+            --accent-color: #02d7f2;
+            --accent-hover: #f2e900; 
+            --section-bg: #161b22;
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Base & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Typography & Links */
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        
+        a:hover, a:focus {
+            color: var(--accent-hover);
+            text-shadow: 0 0 8px var(--accent-hover);
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--section-bg);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav li {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Unique divider symbol */
+        nav li:not(:last-child)::after {
+            content: " || ";
+            color: #8b949e;
+            margin-left: 15px;
+            font-size: 0.9rem;
+        }
+
+        nav a {
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Main Content area */
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: var(--section-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-hover);
+            border-bottom: 4px solid var(--accent-hover);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Images and Figures */
+        figure {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #0d1117;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 2px solid #30363d;
+        }
+
+        figcaption {
+            margin-top: 0.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Reset the paragraph text inside the figcaption so it formats correctly */
+        figure p {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #8b949e;
+            font-weight: normal;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        /* Item variety: Lists, Tables, Forms */
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: #0d1117;
+        }
+
+        th, td {
+            border: 1px solid #30363d;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        th { 
+            background-color: #21262d; 
+            color: var(--accent-color);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            background: #0d1117;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+
+        input, button {
+            padding: 0.8rem;
+            border-radius: 4px;
+            border: 1px solid #30363d;
+            background-color: #161b22;
+            color: #ffffff;
+            font-family: inherit;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: #000000;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        button:hover { 
+            background-color: var(--accent-hover); 
+            color: #ffffff;
+            box-shadow: 0 0 10px var(--accent-hover);
+        }
+
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #8b949e;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--section-bg);
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #30363d;
+            margin-top: auto;
+        }
+
+        .validation-buttons img {
+            height: 31px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Custom Builds & PC Gaming</h1>
+        <nav>
+            <ul>
+                <li><a onclick="switchSection('what')" tabindex="0" role="button">What</a></li>
+                <li><a onclick="switchSection('who')" tabindex="0" role="button">Who</a></li>
+                <li><a onclick="switchSection('when')" tabindex="0" role="button">When</a></li>
+                <li><a onclick="switchSection('where')" tabindex="0" role="button">Where</a></li>
+                <li><a onclick="switchSection('how')" tabindex="0" role="button">How</a></li>
+                <li><a onclick="switchSection('why')" tabindex="0" role="button">Why</a></li>
+                <li><a onclick="switchSection('ai-prompts')" tabindex="0" role="button">AI Prompts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="what" class="active">
+            <h2>What is PC Gaming?</h2>
+            <p>PC Gaming is the hobby of playing video games on a personal computer rather than a dedicated console. It is characterized by deep hardware customization, a massive library of both indie and AAA titles, and pushing the boundaries of graphical fidelity.</p>
+            <p>From building liquid-cooled custom builds glowing with RGB lights to modifying game files to create entirely new experiences, PC gaming is as much about the hardware and software ecosystem as it is about playing.</p>
+            <figure>
+                <img src="images/what.png" alt="A high-end custom gaming PC tower glowing with neon pink and blue RGB lights inside a dark room">
+                <figcaption>
+                    The Custom Build
+                    <p><i>AI Prompt used: "Photorealistic image of a high-end custom gaming PC tower with a glass side panel, glowing with neon pink and cyan RGB lighting, sitting on a dark desk, 8k resolution"</i></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="who">
+            <h2>Who are PC Gamers?</h2>
+            <p>The community ranges from casual players enjoying cozy indie games on laptops to hardcore hardware enthusiasts chasing extreme performance.</p>
+            <ul>
+                <li><strong>eSports Competitor:</strong> Needs 240Hz+ monitors and ultra-low latency mice for competitive games.</li>
+                <li><strong>Hardware Enthusiast:</strong> Treats building and overclocking the PC as the actual game.</li>
+                <li><strong>Modders:</strong> Rewrites game code to add new textures, features, or completely overhaul gameplay.</li>
+            </ul>
+            <figure>
+                <img src="images/who.png" alt="A gamer wearing a headset looking intently at a glowing dual-monitor setup">
+                <figcaption>
+                    In The Zone
+                    <p><i>AI Prompt used: "Photorealistic portrait of a gamer wearing an illuminated headset in a dark room, face lit up by the glow of a dual-monitor setup"</i></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="when">
+            <h2>When to Upgrade or Buy?</h2>
+            <p>The PC hardware market is cyclical. Knowing when to buy your components or your games can save you hundreds of dollars.</p>
+            <table>
+                <tr>
+                    <th>Season</th>
+                    <th>Hardware Cycles</th>
+                    <th>Software Sales</th>
+                </tr>
+                <tr>
+                    <td>Summer</td>
+                    <td>Usually quiet, occasional mid-tier GPU drops</td>
+                    <td>The massive Steam Summer Sale (June/July)</td>
+                </tr>
+                <tr>
+                    <td>Fall</td>
+                    <td>Next-gen CPUs and GPUs are traditionally announced</td>
+                    <td>Black Friday / Cyber Monday deals on hardware</td>
+                </tr>
+                <tr>
+                    <td>Winter</td>
+                    <td>New hardware hits the shelves</td>
+                    <td>Steam Winter Sale</td>
+                </tr>
+            </table>
+            <figure>
+                <img src="images/when.png" alt="A digital calendar interface hovering over a mechanical keyboard">
+                <figcaption>
+                    Timing the Market
+                    <p><i>AI Prompt used: "Photorealistic macro shot of a mechanical RGB keyboard with a glowing neon holographic calendar hovering above it, dark cyberpunk aesthetic"</i></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="where">
+            <h2>Where to Get Your Games</h2>
+            <p>Unlike consoles, the PC is an open platform. You aren't locked into a single digital storefront, allowing for competitive pricing and massive free libraries.</p>
+            <ol>
+                <li><strong>Steam:</strong> The undisputed king. Offers the largest library, user reviews, and community workshops for mods.</li>
+                <li><strong>Epic Games Store:</strong> Known for exclusive titles and giving away games for free every week.</li>
+                <li><strong>GOG (Good Old Games):</strong> The best place for DRM-free gaming and perfectly optimized classic titles.</li>
+            </ol>
+            <h2>Where to Find Parts</h2>
+            <p>When it comes to purchasing PC components, there are several reputable retailers and online marketplaces to consider.</p>
+            <ol>
+                <li><strong>Newegg:</strong> A well-known online retailer for PC components and accessories.</li>
+                <li><strong>Micro Center:</strong> A popular brick-and-mortar retailer for PC components and accessories, with one located in Charlotte, North Carolina.</li>
+                <li><strong>Amazon:</strong> A major online retailer that carries a wide selection of PC components and accessories.</li>
+            </ol>
+            <figure>
+                <img src="images/where.png" alt="A massive futuristic digital library interface with game covers floating in neon light">
+                <figcaption>
+                    The Digital Library
+                    <p><i>AI Prompt used: "Photorealistic render of a futuristic digital storefront interface showing glowing video game covers floating in a dark cyberpunk space"</i></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>How to Build Your First PC</h2>
+            <p>Building a PC is often described as "LEGOs for adults." Youtube is a great resource for learning the basics and getting a general idea of the process. If you are worried about the complexity, you can always start with a pre-built system or seek help from the community.</p>
+            <p>Sites like <a href="https://pcpartpicker.com" target="_blank">PCPartPicker</a> can help you find the best deals on components and help you build a custom rig that fits your budget and performance needs. They also have community recommended builds you can use as a starting point.</p>
+            <form action="#" method="get">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="gamer@example.com" required>
+                <button type="submit">Send Me The Build Guide</button>
+            </form>
+            <figure>
+                <img src="images/how.jpg" alt="Close up of a person's hands carefully installing a CPU into a modern motherboard">
+                <figcaption>
+                    Dropping in the CPU
+                    <p><i>Picture of me installing a CPU into a motherboard</i></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why Choose PC?</h2>
+            <p>PC gaming offers total freedom. You can play with a mouse and keyboard, an Xbox controller, or a steering wheel. You control the graphical settings, and your game library carries forward with you forever without needing "remasters."</p>
+            <blockquote>
+                "The PC is the only platform that allows you to start as a player, become a modder, and eventually evolve into a game developer, all on the exact same machine."
+            </blockquote>
+            <figure>
+                <img src="images/why.jpg" alt="A breathtaking, hyper-realistic fantasy game landscape shown on an ultrawide monitor">
+                <figcaption>
+                    Unmatched Fidelity
+                    <p><i>Picture of my custom built PC</i></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="ai-prompts">
+            <h2>AI Usage & Prompts</h2>
+            <p>Disclosure regarding the use of Artificial Intelligence on this project.</p>
+            <ul>
+                <li>The HTML, CSS structure, and body text were written by Me with assistance from Gemini to help double-check my work.</li>
+                <li>Some of the images were generated using AI, others are photos taken by me.</li>
+                <li>The exact prompts used to generate each image are documented in the captions of the figures.</li>
+            </ul>
+            <figure>
+                <img src="images/what.png" alt="A high-end custom gaming PC tower glowing with neon pink and blue RGB lights inside a dark room">
+                <figcaption>
+                    The Custom Build
+                    <p><i>AI Prompt used: "Photorealistic image of a high-end custom gaming PC tower with a glass side panel, glowing with neon pink and cyan RGB lighting, sitting on a dark desk, 8k resolution"</i></p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/who.png" alt="A gamer wearing a headset looking intently at a glowing dual-monitor setup">
+                <figcaption>
+                    In The Zone
+                    <p><i>AI Prompt used: "Photorealistic portrait of a gamer wearing an illuminated headset in a dark room, face lit up by the glow of a dual-monitor setup"</i></p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/when.png" alt="A digital calendar interface hovering over a mechanical keyboard">
+                <figcaption>
+                    Timing the Market
+                    <p><i>AI Prompt used: "Photorealistic macro shot of a mechanical RGB keyboard with a glowing neon holographic calendar hovering above it, dark cyberpunk aesthetic"</i></p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/where.png" alt="A massive futuristic digital library interface with game covers floating in neon light">
+                <figcaption>
+                    The Digital Library
+                    <p><i>AI Prompt used: "Photorealistic render of a futuristic digital storefront interface showing glowing video game covers floating in a dark cyberpunk space"</i></p>
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by: <a href="../../talexdesigns.org/index.html">Talex Designs</a></p>
+        <br>
+        <div class="validation-buttons">
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+            </a>
+            <a href="https://wave.webaim.org/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Web_Accessibility_Logo.svg" alt="WAVE Accessibility Checker" style="border-radius: 4px; background: white; padding: 2px;">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function switchSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
