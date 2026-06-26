@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Alexander's Tenacious Ant | ITIS3135 | Pictures</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            align-items: baseline;
+            flex-wrap: wrap; /* Added so the 4 side-by-side images don't break the page width */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Everything Pictures</h2>
+        
+        <p>This page demonstrates various techniques for handling, resizing, and formatting images for the web. It explores the relationship between image dimensions, file sizes, and aspect ratios using both high-resolution photography and personal geometric references.</p>
+
+        <section>
+            <h3>Demonstrating Image Manipulation with a Circuit Board Photo from Pexels</h3>
+            <p>I selected this photo of a Circuit Board because the fine details of the components and traces make compression artifacts easy to spot. It was taken by Sergei Starostin. The original image is a high-resolution JPG measuring 5873x3915 pixels, with a file size of roughly 1.7 MB.</p>
+            
+            <article>
+                <h4>Original Image and Converted Formats</h4>
+                <div class="flex-container">
+                    <a href="images/blue-and-silver-circuit-board-6636476@sergei-starostin_pexels.jpg" target="_blank">Click to open Original Image (JPG)</a>
+                    <a href="images/blue-and-silver-circuit-board-6636476@sergei-starostin_pexels.gif" target="_blank">Original Image as GIF</a>
+                    <a href="images/blue-and-silver-circuit-board-6636476-greyscale@sergei-starostin_pexels.jpg" target="_blank">Greyscale JPG</a>
+                    <a href="images/blue-and-silver-circuit-board-6636476-bw@sergei-starostin_pexels.jpg" target="_blank">Black & White JPG</a>
+                </div>
+            </article>
+
+            <article>
+                <h4>Downsizing Images with CSS</h4>
+                <figure>
+                    <img src="images/blue-and-silver-circuit-board-6636476@sergei-starostin_pexels.jpg" alt="Original image scaled down with CSS" style="width: 40%; height: auto;">
+                    <figcaption>The massive original file, shrunk down visually by the browser using CSS width.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with Editor</h4>
+                <figure>
+                    <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Properly resized image" style="width: 600px; height: auto;">
+                    <figcaption>Properly resized in an editor to 600px wide. Notice the file size is much smaller, but it looks identical on screen.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <div class="flex-container">
+                    <figure>
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished vertically 33%" style="width: 600px; height: 268px;">
+                        <figcaption>Width matches original (600px), Height squished by 33%.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished vertically 66%" style="width: 600px; height: 179px;">
+                        <figcaption>Width matches original (600px), Height squished further.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished horizontally 33%" style="width: 400px; height: 400px;">
+                        <figcaption>Height matches original (400px), Width squished by 33%.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished horizontally 66%" style="width: 268px; height: 400px;">
+                        <figcaption>Height matches original (400px), Width squished further.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <div class="flex-container">
+                    <figure>
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Good quality 600px image" style="width: 600px; height: 400px;">
+                        <figcaption>Proper 600x400 image displayed at native 600x400 size.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/blue-and-silver-circuit-board-6636476-150x100@sergei-starostin_pexels.jpg" alt="Poor quality enlarged image" style="width: 600px; height: 400px;">
+                        <figcaption>A tiny 150x100 image forced to display at 600x400 via CSS. Notice the pixelation.</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Demonstrating Proportions with a Personal Geometry Image</h3>
+            <p>I took this photo featuring my hand and a can of soda from above. I picked a soda can because a perfect circle is an excellent way to easily spot visual distortion. The resolution is 3024x4032 pixels, and the file size is 2.05 MB.</p>
+            
+            <article>
+                <h4>Original Image and Converted Formats</h4>
+                <div class="flex-container">
+                    <a href="images/holding-soda-can@travis-alexander.jpg" target="_blank">Click to open Original Image (JPG)</a>
+                    <a href="images/holding-soda-can@travis-alexander.gif" target="_blank">Original Image as GIF</a>
+                    <a href="images/holding-soda-can-greyscale@travis-alexander.jpg" target="_blank">Greyscale JPG</a>
+                    <a href="images/holding-soda-can-bw@travis-alexander.jpg" target="_blank">Black & White JPG</a>
+                </div>
+            </article>
+
+            <article>
+                <h4>Downsizing Images with CSS</h4>
+                <figure>
+                    <img src="images/holding-soda-can@travis-alexander.jpg" alt="Original geometry image scaled down with CSS" style="width: 30%; height: auto;">
+                    <figcaption>The large original phone photo, visually scaled down by the browser using CSS width.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with Editor</h4>
+                <figure>
+                    <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Properly resized geometry image" style="width: 600px; height: auto;">
+                    <figcaption>Properly resized in an editor to 600px wide. The square milk crate remains perfectly square.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <div class="flex-container">
+                    <figure>
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished vertically 33%" style="width: 600px; height: 301px;">
+                        <figcaption>Width matches original (600px), Height squished by 33%. The square crate is now a rectangle.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished vertically 66%" style="width: 600px; height: 202px;">
+                        <figcaption>Width matches original (600px), Height squished further.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished horizontally 33%" style="width: 400px; height: 450px;">
+                        <figcaption>Height matches original (450px), Width squished by 33%.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished horizontally 66%" style="width: 268px; height: 450px;">
+                        <figcaption>Height matches original (450px), Width squished further.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <div class="flex-container">
+                    <figure>
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Good quality 600px geometry image" style="width: 600px; height: 450px;">
+                        <figcaption>Proper 600x450 image displayed at native 600x450 size.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/holding-soda-can-150x113@travis-alexander.jpg" alt="Poor quality enlarged geometry image" style="width: 600px; height: 450px;">
+                        <figcaption>A tiny 150x112 image forced to display at 600x450 via CSS. The crate and face will look blurry and pixelated.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>
