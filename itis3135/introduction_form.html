@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Alexander's Tenacious Ant | ITIS3135 | Introduction</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        form {
+            background-color: #2c2c2c;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+            color: #e0e0e0;
+        }
+
+        fieldset {
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        legend {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 0 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        h4 {
+            color: #e0e0e0;
+            border-bottom: 1px solid #444;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="url"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            box-sizing: border-box;
+        }
+        
+        .course-entry {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .course-entry input {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .form-controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #cc7a00;
+        }
+        
+        .delete-btn {
+            background-color: #b71c1c;
+            color: #fff;
+            width: auto;
+        }
+
+        .delete-btn:hover {
+            background-color: #d32f2f;
+        }
+        
+        .delete-btn:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+        
+        #result-container {
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+            color: #e0e0e0;
+        }
+        
+        #result-container a {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main class="container">
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below.</h3>
+
+        <div id="form-container">
+            <form id="introForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" value="Travis" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName">Middle Name/Initial (optional)</label>
+                        <input type="text" id="middleName" value="M" placeholder="Middle Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="nickName">Nickname/Preferred Name (optional)</label>
+                        <input type="text" id="nickName" value="Travis" placeholder="Nickname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" value="Alexander" placeholder="Enter your last name" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Brand & Identity</legend>
+                    <div class="form-group">
+                        <label for="mascotAdj">Mascot Adjective</label>
+                        <input type="text" id="mascotAdj" value="Tenacious" placeholder="e.g., Talented" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mascotAnimal">Mascot Animal</label>
+                        <input type="text" id="mascotAnimal" value="Ant" placeholder="e.g., Tiger" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="divider">Divider</label>
+                        <input type="text" id="divider" value="|" placeholder="~, |, etc." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userImage">Picture</label>
+                        <input type="file" id="userImage" accept="image/*">
+                        <input type="hidden" id="defaultImage" value="images/pfp.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageCaption">Picture Caption</label>
+                        <input type="text" id="imageCaption" value="The one picture I use for most of my profile pictures." placeholder="Describe the image" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Background & Details</legend>
+                    <div class="form-group">
+                        <label for="personalStatement">Personal Statement</label>
+                        <textarea id="personalStatement" rows="4" placeholder="Short intro about yourself" required>Computer Science student at UNC Charlotte, a right-to-repair advocate who loves building custom PCs and spending time with my dogs.</textarea>
+                    </div>
+                    
+                    <h4>7 Main Bullets</h4>
+                    <div class="form-group">
+                        <label for="bullet1">1. Personal Background</label>
+                        <input type="text" id="bullet1" value="I am 24 years old and have lived around the Charlotte area my whole life. I attended my freshman year of college at App State during the COVID pandemic, and then transferred to SPCC after my first year." placeholder="Personal background details" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bullet2">2. Professional Background</label>
+                        <input type="text" id="bullet2" value="While in college, I have worked part-time in retail. For the past two summers, I have been interning in the IT department at my local community college." placeholder="Work experience" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bullet3">3. Academic Background</label>
+                        <input type="text" id="bullet3" value="I am currently a senior at UNCC, planning to graduate in Fall 2026. I am majoring in Computer Science with a concentration in Systems and Networks." placeholder="School/Degree info" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bullet4">4. Web Development Background</label>
+                        <input type="text" id="bullet4" value="I have some foundational knowledge, but I am taking this to learn modern web development practices." placeholder="Web dev skills" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bullet5">5. Primary Computer Platform</label>
+                        <input type="text" id="bullet5" value="Custom-built Windows 11 desktop, located at my desk at home." placeholder="OS/Hardware" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bullet6">6. Funny/Interesting Item</label>
+                        <input type="text" id="bullet6" value="Most of the IT work I complete has me paid in pizza" placeholder="Something unique about you" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bullet7">7. Something I'd like to share</label>
+                        <input type="text" id="bullet7" value="Favorite quote is from Portal 2" placeholder="Anything else?" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Courses Currently Taking</legend>
+                    <div id="courses-container">
+                        <div class="course-entry">
+                            <input type="text" class="courseDept" value="ITIS" placeholder="Dept" required>
+                            <input type="text" class="courseNum" value="3135" placeholder="Number" required>
+                            <input type="text" class="courseName" value="Front-End Web App Development" placeholder="Name" required>
+                            <input type="text" class="courseReason" value="Degree requirement and building full-stack skills." placeholder="Reason" required>
+                            <button type="button" class="delete-btn" disabled>Delete</button>
+                        </div>
+                    </div>
+                    <button type="button" id="addCourseBtn">Add Another Course</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Extras</legend>
+                    <div class="form-group">
+                        <label for="quoteText">Quote</label>
+                        <input type="text" id="quoteText" value="All right, I've been thinking, when life gives you lemons, don't make lemonade! Make life take the lemons back! Get mad! I don't want your damn lemons! What am I supposed to do with these?" placeholder="Favorite quote" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quoteAuthor">Quote Author</label>
+                        <input type="text" id="quoteAuthor" value="Cave Johnson" placeholder="Author name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funnyThing">Funny Thing (optional)</label>
+                        <input type="text" id="funnyThing" value="" placeholder="A joke or funny thought">
+                    </div>
+                    
+                    <h4>5 Links</h4>
+                    <div class="form-group">
+                        <input type="url" class="user-link" value="https://webpages.charlotte.edu/talexa38/" placeholder="Link 1" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" value="https://github.com/talex38" placeholder="Link 2 (GitHub)" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" value="https://www.linkedin.com/in/travismalexander/" placeholder="Link 3 (LinkedIn)" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" value="https://www.freecodecamp.org/talexa38" placeholder="Link 4" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" value="https://www.codecademy.com/profiles/talexa38" placeholder="Link 5" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Acknowledgment</legend>
+                    <div class="form-group">
+                        <label for="ackStatement">Statement</label>
+                        <input type="text" id="ackStatement" value="I understand the requirements of this course and agree to abide by them." placeholder="Acknowledgment text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ackDate">Date</label>
+                        <input type="text" id="ackDate" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}" required>
+                    </div>
+                </fieldset>
+
+                <div class="form-controls">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button" id="clearBtn">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div id="result-container" style="display: none;"></div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+</body>
+</html>
