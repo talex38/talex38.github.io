@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
         courseDiv.className = "course-entry";
         
         courseDiv.innerHTML = `
-            <input type="text" class="courseDept" title="Course Department" placeholder="Dept" required>
-            <input type="text" class="courseNum" title="Course Number" placeholder="Number" required>
-            <input type="text" class="courseName" title="Course Name" placeholder="Name" required>
-            <input type="text" class="courseReason" title="Reason for taking course" placeholder="Reason" required>
+            <input type="text" class="courseDept" aria-labelledby="lbl-dept" placeholder="Dept" required>
+            <input type="text" class="courseNum" aria-labelledby="lbl-num" placeholder="Number" required>
+            <input type="text" class="courseName" aria-labelledby="lbl-name" placeholder="Name" required>
+            <input type="text" class="courseReason" aria-labelledby="lbl-reason" placeholder="Reason" required>
             <button type="button" class="delete-btn">Delete</button>
         `;
         
