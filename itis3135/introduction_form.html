@@ -85,6 +85,7 @@
             background-color: var(--primary-color);
             color: #000;
             border: none;
+            padding: 1rem;
             font-size: 1.1rem;
             font-weight: bold;
             border-radius: 4px;
@@ -112,6 +113,7 @@
         }
         
         #result-container {
+            background-color: #2c2c2c;
             padding: 2rem;
             border-radius: 8px;
             border-top: 4px solid var(--primary-color);
@@ -220,10 +222,10 @@
                     <legend>Courses Currently Taking</legend>
                     <div id="courses-container">
                         <div class="course-entry">
-                            <input type="text" class="courseDept" value="ITIS" placeholder="Dept" required>
-                            <input type="text" class="courseNum" value="3135" placeholder="Number" required>
-                            <input type="text" class="courseName" value="Front-End Web App Development" placeholder="Name" required>
-                            <input type="text" class="courseReason" value="Degree requirement and building full-stack skills." placeholder="Reason" required>
+                            <input type="text" class="courseDept" aria-label="Course Department" value="ITIS" placeholder="Dept" required>
+                            <input type="text" class="courseNum" aria-label="Course Number" value="3135" placeholder="Number" required>
+                            <input type="text" class="courseName" aria-label="Course Name" value="Front-End Web App Development" placeholder="Name" required>
+                            <input type="text" class="courseReason" aria-label="Reason for taking course" value="Degree requirement and building full-stack skills." placeholder="Reason" required>
                             <button type="button" class="delete-btn" disabled>Delete</button>
                         </div>
                     </div>
@@ -247,11 +249,11 @@
                     
                     <h4>5 Links</h4>
                     <div class="form-group">
-                        <input type="url" class="user-link" value="https://webpages.charlotte.edu/talexa38/" placeholder="Link 1" required style="margin-bottom: 0.5rem;">
-                        <input type="url" class="user-link" value="https://github.com/talex38" placeholder="Link 2 (GitHub)" required style="margin-bottom: 0.5rem;">
-                        <input type="url" class="user-link" value="https://www.linkedin.com/in/travismalexander/" placeholder="Link 3 (LinkedIn)" required style="margin-bottom: 0.5rem;">
-                        <input type="url" class="user-link" value="https://www.freecodecamp.org/talexa38" placeholder="Link 4" required style="margin-bottom: 0.5rem;">
-                        <input type="url" class="user-link" value="https://www.codecademy.com/profiles/talexa38" placeholder="Link 5" required>
+                        <input type="url" class="user-link" aria-label="Link 1" value="https://webpages.charlotte.edu/talexa38/" placeholder="Link 1" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" aria-label="Link 2" value="https://github.com/talex38" placeholder="Link 2 (GitHub)" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" aria-label="Link 3" value="https://www.linkedin.com/in/travismalexander/" placeholder="Link 3 (LinkedIn)" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" aria-label="Link 4" value="https://www.freecodecamp.org/talexa38" placeholder="Link 4" required style="margin-bottom: 0.5rem;">
+                        <input type="url" class="user-link" aria-label="Link 5" value="https://www.codecademy.com/profiles/talexa38" placeholder="Link 5" required>
                     </div>
                 </fieldset>
 
@@ -274,6 +276,7 @@
                 </div>
             </form>
         </div>
+
         <div id="result-container" style="display: none;"></div>
     </main>
 
