@@ -7,6 +7,8 @@
     <title>Travis Alexander's Tenacious Ant | ITIS3135 | Product</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <style>
         #hero {
             text-align: center;
@@ -23,8 +25,8 @@
             padding: 0.5rem;
             width: 60%;
             max-width: 300px;
-            background: #ffffff;
-            color: #111111;
+            background: #e0e0e0;
+            color: #2c2c2c;
             border-radius: 4px;
         }
 
@@ -42,6 +44,20 @@
             padding: 1.5rem;
             border-radius: 8px;
             margin-bottom: 1.5rem;
+        }
+
+        #how-it-works {
+            text-align: center;
+        }
+
+        #build-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -70,13 +86,12 @@
             </ul>
         </section>
 
-        <section id="how-it-works" class="section-box" style="text-align: center;">
+        <section id="how-it-works" class="section-box">
             <h2>How Our Ants Build It</h2>
-            <!--Stock image of a custom PC build -->
+            <!-- Stock image of a custom PC build -->
             <img id="build-image"
                 src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Interior of a high-performance custom PC build with glowing lights"
-                style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; border: 2px solid var(--primary-color); display: block; margin: 0 auto;">
+                alt="Interior of a high-performance custom PC build with glowing lights">
         </section>
 
         <section id="pricing" class="section-box">
@@ -89,6 +104,7 @@
 
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 </body>
 
 </html>

@@ -6,13 +6,45 @@
     <title>Travis Alexander's Tenacious Ant | ITIS3135 | Pictures</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <style>
         .flex-container {
             display: flex;
             gap: 20px;
             align-items: baseline;
-            flex-wrap: wrap; /* Added so the 4 side-by-side images don't break the page width */
+            flex-wrap: wrap; 
         }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .scale-css-40 { width: 40%; height: auto; }
+
+        .scale-css-30 { width: 30%; height: auto; }
+
+        .scale-proper-600 { width: 600px; height: auto; }
+
+        .squish-v-33-circuit { width: 600px; height: 268px; }
+
+        .squish-v-66-circuit { width: 600px; height: 179px; }
+
+        .squish-h-33-circuit { width: 400px; height: 400px; }
+
+        .squish-h-66-circuit { width: 268px; height: 400px; }
+
+        .enlarge-circuit { width: 600px; height: 400px; }
+
+        .squish-v-33-geom { width: 600px; height: 301px; }
+
+        .squish-v-66-geom { width: 600px; height: 202px; }
+
+        .squish-h-33-geom { width: 400px; height: 450px; }
+
+        .squish-h-66-geom { width: 268px; height: 450px; }
+
+        .enlarge-geom { width: 600px; height: 450px; }
     </style>
 </head>
 
@@ -42,7 +74,7 @@
             <article>
                 <h4>Downsizing Images with CSS</h4>
                 <figure>
-                    <img src="images/blue-and-silver-circuit-board-6636476-resize@sergei-starostin_pexels.jpg" alt="Original image scaled down with CSS" style="width: 40%; height: auto;">
+                    <img src="images/blue-and-silver-circuit-board-6636476-resize@sergei-starostin_pexels.jpg" alt="Original image scaled down with CSS" class="scale-css-40">
                     <figcaption>The massive original file, shrunk down visually by the browser using CSS width.</figcaption>
                 </figure>
             </article>
@@ -50,7 +82,7 @@
             <article>
                 <h4>Proper Reduction of Image with Editor</h4>
                 <figure>
-                    <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Properly resized image" style="width: 600px; height: auto;">
+                    <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Properly resized image" class="scale-proper-600">
                     <figcaption>Properly resized in an editor to 600px wide. Notice the file size is much smaller, but it looks identical on screen.</figcaption>
                 </figure>
             </article>
@@ -59,19 +91,19 @@
                 <h4>Improper Image Proportions with CSS</h4>
                 <div class="flex-container">
                     <figure>
-                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished vertically 33%" style="width: 600px; height: 268px;">
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished vertically 33%" class="squish-v-33-circuit">
                         <figcaption>Width matches original (600px), Height squished by 33%.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished vertically 66%" style="width: 600px; height: 179px;">
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished vertically 66%" class="squish-v-66-circuit">
                         <figcaption>Width matches original (600px), Height squished further.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished horizontally 33%" style="width: 400px; height: 400px;">
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished horizontally 33%" class="squish-h-33-circuit">
                         <figcaption>Height matches original (400px), Width squished by 33%.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished horizontally 66%" style="width: 268px; height: 400px;">
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Squished horizontally 66%" class="squish-h-66-circuit">
                         <figcaption>Height matches original (400px), Width squished further.</figcaption>
                     </figure>
                 </div>
@@ -81,11 +113,11 @@
                 <h4>Improper Enlarging with CSS</h4>
                 <div class="flex-container">
                     <figure>
-                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Good quality 600px image" style="width: 600px; height: 400px;">
+                        <img src="images/blue-and-silver-circuit-board-6636476-600x400@sergei-starostin_pexels.jpg" alt="Good quality 600px image" class="enlarge-circuit">
                         <figcaption>Proper 600x400 image displayed at native 600x400 size.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/blue-and-silver-circuit-board-6636476-150x100@sergei-starostin_pexels.jpg" alt="Poor quality enlarged image" style="width: 600px; height: 400px;">
+                        <img src="images/blue-and-silver-circuit-board-6636476-150x100@sergei-starostin_pexels.jpg" alt="Poor quality enlarged image" class="enlarge-circuit">
                         <figcaption>A tiny 150x100 image forced to display at 600x400 via CSS. Notice the pixelation.</figcaption>
                     </figure>
                 </div>
@@ -111,7 +143,7 @@
             <article>
                 <h4>Downsizing Images with CSS</h4>
                 <figure>
-                    <img src="images/holding-soda-can-resize@travis-alexander.jpg" alt="Original geometry image scaled down with CSS" style="width: 30%; height: auto;">
+                    <img src="images/holding-soda-can-resize@travis-alexander.jpg" alt="Original geometry image scaled down with CSS" class="scale-css-30">
                     <figcaption>The large original phone photo, visually scaled down by the browser using CSS width.</figcaption>
                 </figure>
             </article>
@@ -119,7 +151,7 @@
             <article>
                 <h4>Proper Reduction of Image with Editor</h4>
                 <figure>
-                    <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Properly resized geometry image" style="width: 600px; height: auto;">
+                    <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Properly resized geometry image" class="scale-proper-600">
                     <figcaption>Properly resized in an editor to 600px wide. The square milk crate remains perfectly square.</figcaption>
                 </figure>
             </article>
@@ -128,19 +160,19 @@
                 <h4>Improper Image Proportions with CSS</h4>
                 <div class="flex-container">
                     <figure>
-                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished vertically 33%" style="width: 600px; height: 301px;">
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished vertically 33%" class="squish-v-33-geom">
                         <figcaption>Width matches original (600px), Height squished by 33%. The square crate is now a rectangle.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished vertically 66%" style="width: 600px; height: 202px;">
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished vertically 66%" class="squish-v-66-geom">
                         <figcaption>Width matches original (600px), Height squished further.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished horizontally 33%" style="width: 400px; height: 450px;">
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished horizontally 33%" class="squish-h-33-geom">
                         <figcaption>Height matches original (450px), Width squished by 33%.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished horizontally 66%" style="width: 268px; height: 450px;">
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Geometry squished horizontally 66%" class="squish-h-66-geom">
                         <figcaption>Height matches original (450px), Width squished further.</figcaption>
                     </figure>
                 </div>
@@ -150,11 +182,11 @@
                 <h4>Improper Enlarging with CSS</h4>
                 <div class="flex-container">
                     <figure>
-                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Good quality 600px geometry image" style="width: 600px; height: 450px;">
+                        <img src="images/holding-soda-can-600x450@travis-alexander.jpg" alt="Good quality 600px geometry image" class="enlarge-geom">
                         <figcaption>Proper 600x450 image displayed at native 600x450 size.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/holding-soda-can-150x113@travis-alexander.jpg" alt="Poor quality enlarged geometry image" style="width: 600px; height: 450px;">
+                        <img src="images/holding-soda-can-150x113@travis-alexander.jpg" alt="Poor quality enlarged geometry image" class="enlarge-geom">
                         <figcaption>A tiny 150x112 image forced to display at 600x450 via CSS. The crate and face will look blurry and pixelated.</figcaption>
                     </figure>
                 </div>
@@ -162,7 +194,7 @@
 
         </section>
 
-         <section style="text-align: center;">
+         <section class="text-center">
                 <h3>AI Usage & Reflection</h3>
                 <p>AI was utilized in this assignment for page for a rubric and checking my work.</p>
 
@@ -174,6 +206,6 @@
 
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
-
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 </body>
 </html>

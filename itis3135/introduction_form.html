@@ -6,6 +6,8 @@
     <title>Travis Alexander's Tenacious Ant | ITIS3135 | Introduction</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <style>
         form {
             background-color: #2c2c2c;
@@ -84,7 +86,7 @@
 
         button {
             background-color: var(--primary-color);
-            color: #000;
+            color: #2c2c2c; 
             border: none;
             font-size: 1.1rem;
             font-weight: bold;
@@ -100,7 +102,7 @@
         
         .delete-btn {
             background-color: #b71c1c;
-            color: #fff;
+            color: #e0e0e0; 
             width: auto;
         }
 
@@ -120,6 +122,7 @@
             border-top: 4px solid var(--primary-color);
             color: #e0e0e0;
             margin-top: 2rem;
+            display: none; 
         }
         
         #result-container a {
@@ -144,6 +147,14 @@
             overflow-wrap: normal;
             overflow-x: auto;
             resize: vertical;
+        }
+
+        .user-link {
+            margin-bottom: 0.5rem;
+        }
+        
+        #link5 {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -279,16 +290,16 @@
                     <h4>5 Links</h4>
                     <div class="form-group">
                         <label for="link1" class="sr-only">CLT Website</label>
-                        <input type="url" id="link1" class="user-link" value="https://webpages.charlotte.edu/talexa38/" placeholder="CLT Website" required style="margin-bottom: 0.5rem;">
+                        <input type="url" id="link1" class="user-link" value="https://webpages.charlotte.edu/talexa38/" placeholder="CLT Website" required>
                         
                         <label for="link2" class="sr-only">GitHub</label>
-                        <input type="url" id="link2" class="user-link" value="https://github.com/talex38" placeholder="GitHub" required style="margin-bottom: 0.5rem;">
+                        <input type="url" id="link2" class="user-link" value="https://github.com/talex38" placeholder="GitHub" required>
                         
                         <label for="link3" class="sr-only">LinkedIn</label>
-                        <input type="url" id="link3" class="user-link" value="https://www.linkedin.com/in/travismalexander/" placeholder="LinkedIn" required style="margin-bottom: 0.5rem;">
+                        <input type="url" id="link3" class="user-link" value="https://www.linkedin.com/in/travismalexander/" placeholder="LinkedIn" required>
                         
                         <label for="link4" class="sr-only">freeCodeCamp</label>
-                        <input type="url" id="link4" class="user-link" value="https://www.freecodecamp.org/talexa38" placeholder="freeCodeCamp" required style="margin-bottom: 0.5rem;">
+                        <input type="url" id="link4" class="user-link" value="https://www.freecodecamp.org/talexa38" placeholder="freeCodeCamp" required>
                         
                         <label for="link5" class="sr-only">Codecademy</label>
                         <input type="url" id="link5" class="user-link" value="https://www.codecademy.com/profiles/talexa38" placeholder="Codecademy" required>
@@ -318,9 +329,9 @@
             </form>
         </div>
 
-        <div id="result-container" style="display: none;"></div>
+        <div id="result-container"></div>
         
-        <div id="code-output-container" style="display: none;">
+        <div id="code-output-container">
             <h4>Generated Code</h4>
             <label for="code-textarea" class="sr-only">Generated Code</label>
             <textarea id="code-textarea" rows="20"></textarea>
@@ -330,5 +341,6 @@
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
     <script src="scripts/introduction.js"></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 </body>
 </html>
