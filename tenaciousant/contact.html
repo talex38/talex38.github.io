@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tenacious Ant - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+</head>
+<body>
+    <div id="main-header"></div>
+
+    <main>
+        <h2>Contact The Tenacious Ant</h2>
+        
+        <img src="https://placehold.co/800x400/172a3a/7371fc?text=Signal+The+Colony" alt="Contact Us" class="page-image">
+        
+        <p>Need to get in touch with <strong>The Tenacious Ant</strong>? Our colony is located in the heart of the digital realm, but we handle physical logistics and build consultations remotely. We operate Monday through Friday, ensuring that your hardware requests are processed efficiently during standard operational hours.</p>
+        
+        <p>Use the communication form below to send a signal directly to our worker queue. Whether you need troubleshooting assistance, a quote for a custom rig, or advice on network infrastructure, we are ready to assist. We typically respond within one business day.</p>
+        
+        <form id="contactForm" style="margin-top: 2rem;">
+            <label for="userName">Your Name:</label><br>
+            <input type="text" id="userName" required style="margin-bottom: 1rem;"><br>
+            
+            <label for="userMessage">Your Signal (Message):</label><br>
+            <textarea id="userMessage" rows="4" cols="50" required style="margin-bottom: 1rem;"></textarea><br>
+            
+            <button type="submit" style="padding: 0.5rem 1rem; background-color: var(--accent-vibrant-purple); color: var(--text-cyan); border: none; cursor: pointer;">Send Signal</button>
+        </form>
+        
+        <div id="formResponse" style="margin-top: 1rem; color: var(--text-green);"></div>
+
+    </main>
+
+    <div id="main-footer"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

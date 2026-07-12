@@ -1,0 +1,151 @@
+/* css/style.css */
+/* New Color Palette: Dark Grey Background with Blue, Purple, and Red Neons */
+:root {
+    --bg-main: #2b2b2b; /* Sleek dark grey background */
+    --text-main: #e0e0e0; /* Light grey for highly readable text */
+    --neon-blue: #00d2ff;
+    --neon-purple: #b800ff;
+    --neon-red: #ff003c;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+    position: relative; 
+    min-height: 100vh; 
+}
+
+h1, h2, h3 {
+    color: var(--neon-blue);
+}
+
+/* Ensure readable text everywhere */
+p, span, div, li, a {
+    color: var(--text-main);
+}
+
+a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--neon-red);
+}
+
+/* --- HEADER & FOOTER CONTAINERS --- */
+#main-header, 
+#main-footer {
+    position: relative;
+    display: block;
+}
+
+header {
+    background-color: var(--bg-main);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer {
+    background-color: var(--bg-main);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* --- THE 6 NEON LINES (Header, Footer, and Sides) --- */
+body::before, 
+body::after,
+#main-header::before, 
+#main-header::after, 
+#main-footer::before, 
+#main-footer::after {
+    content: '';
+    position: absolute;
+    /* Updated gradient to use 3 colors: Blue -> Purple -> Red */
+    background: linear-gradient(var(--angle, 0deg), var(--neon-blue), var(--neon-purple), var(--neon-red));
+    animation: flicker 7s infinite alternate;
+    z-index: 10;
+}
+
+/* Horizontal Lines Configuration */
+#main-header::before, 
+#main-header::after, 
+#main-footer::before, 
+#main-footer::after {
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+#main-header::before { top: 0; }
+#main-header::after { bottom: 0; }
+#main-footer::before { top: 0; }
+#main-footer::after { bottom: 0; }
+
+/* Vertical Side Lines Configuration */
+body::before, 
+body::after {
+    top: 0;
+    bottom: 0;
+    width: 4px;
+}
+
+body::before { left: 0; }
+body::after { right: 0; }
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        box-shadow: 
+            0 0 5px #b800ff, 
+            0 0 15px #00d2ff, 
+            0 0 30px #ff003c;
+    }
+    20%, 24%, 55% {
+        opacity: 0.8;
+        box-shadow: 0 0 0px transparent; 
+    }
+}
+
+/* --- LAYOUT & IMAGES --- */
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--neon-purple); /* Updated image border */
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid var(--neon-blue); /* Updated slideshow border */
+}
+
+.slide {
+    display: none;
+}
