@@ -71,24 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     runSlideshow();
 });
 
-// js/main.js (Bottom portion)
-
-let angle = 0;
-
-function animateBorder() {
-  angle = (angle + 1) % 360; 
-  
-  // Grab the header and footer containers
-  const headerContainer = document.getElementById('main-header');
-  const footerContainer = document.getElementById('main-footer');
-  
-  // Update the angle variable on both
-  if (headerContainer) headerContainer.style.setProperty('--angle', `${angle}deg`);
-  if (footerContainer) footerContainer.style.setProperty('--angle', `${angle}deg`);
-  
-  requestAnimationFrame(animateBorder);
-}
-
 // Initialize all dynamic functionality when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Load header and footer components
@@ -99,6 +81,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     runSlideshow();
 
-    // Start the rotating gradient line animation
-    animateBorder(); 
 });

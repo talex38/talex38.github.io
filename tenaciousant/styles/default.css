@@ -22,6 +22,7 @@ body {
 
 h1, h2, h3 {
     color: var(--neon-blue);
+    font-family: 'Courier New', Courier, monospace; 
 }
 
 /* Ensure readable text everywhere */
