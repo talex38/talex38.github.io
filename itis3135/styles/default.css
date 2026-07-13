@@ -85,3 +85,28 @@ img, picture, video, canvas, svg {
     height: auto;
     margin: 1.5rem auto; 
 }
+
+.footer-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+/* This creates an invisible block on the right to balance the image on the left */
+.footer-container::after {
+    content: "";
+    width: 80px; /* Must perfectly match the .footer-image width */
+    display: block;
+}
+
+.footer-image {
+    width: 80px; 
+    height: auto; 
+    margin: 0; /* Overrides the global 'margin: 1.5rem auto' to stop it from fighting Flexbox */
+}
+
+.footer-text {
+    text-align: center; 
+}
