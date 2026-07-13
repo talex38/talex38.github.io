@@ -11,7 +11,9 @@
 </head>
 <body>
     <!-- Dynamic Header Inject -->
-    <div id="main-header"></div>
+    <div id="main-header" class="border-wrapper">
+        <div data-include="components/header.html"></div>
+    </div>
 
     <main>
         <h2>Welcome to The Tenacious Ant</h2>
@@ -23,8 +25,9 @@
         <p>Whether you are a hardcore gamer looking for maximum frame rates or a developer needing a reliable workstation, our dedicated worker ants are here to assemble the perfect machine. We test every component with unyielding tenacity to ensure your system performs flawlessly under heavy loads.</p>
     </main>
 
-    <!-- Dynamic Footer Inject -->
-    <div id="main-footer"></div>
+    <div id="main-footer" class="border-wrapper">
+        <div data-include="components/footer.html"></div>
+    </div>
 
     <script src="scripts/main.js"></script>
     <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>

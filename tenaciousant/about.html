@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +11,33 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
-    <div id="main-header"></div>
+    <div id="main-header" class="border-wrapper">
+        <div data-include="components/header.html"></div>
+    </div>
 
     <main>
         <h2>About The Tenacious Ant</h2>
-        
-        <img src="images/abouttheants.png" alt="Our Team of Worker Ants" class="page-image">
-        
-        <p>The foundation of <strong>The Tenacious Ant</strong> was built on a simple philosophy: hardware should be as resilient and hardworking as nature's greatest engineers. We are a small team of dedicated IT professionals and hardware enthusiasts who treat every motherboard, GPU, and processor as a critical piece of a larger ecosystem.</p>
-        
-        <p>We do not just snap parts together. We meticulously route cables, optimize airflow, and fine-tune bios settings to extract every drop of performance. Our tenacity ensures that when you boot up a system built by us, you are experiencing computing perfection engineered by a colony that cares.</p>
-    </main>
 
-    <div id="main-footer"></div>
+        <img src="images/abouttheants.png" alt="Our Team of Worker Ants" class="page-image">
+
+        <p>The foundation of <strong>The Tenacious Ant</strong> was built on a simple philosophy: hardware should be as
+            resilient and hardworking as nature's greatest engineers. We are a small team of dedicated IT professionals
+            and hardware enthusiasts who treat every motherboard, GPU, and processor as a critical piece of a larger
+            ecosystem.</p>
+
+        <p>We do not just snap parts together. We meticulously route cables, optimize airflow, and fine-tune bios
+            settings to extract every drop of performance. Our tenacity ensures that when you boot up a system built by
+            us, you are experiencing computing perfection engineered by a colony that cares.</p>
+    </main>
+    <div id="main-footer" class="border-wrapper"> 
+    <div data-include="components/footer.html"></div>
+    </div>
     <script src="scripts/main.js"></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
     <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
 
 </body>
+
 </html>

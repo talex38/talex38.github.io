@@ -60,14 +60,16 @@ function setupContactForm() {
 
 // Initialize all dynamic functionality when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Load header and footer components
-    loadComponent('#main-header', 'components/header.html');
-    loadComponent('#main-footer', 'components/footer.html').then(() => {
-        // Setup form logic after footer/components might be loaded
-        setupContactForm();
-    });
+    const includes = document.querySelectorAll('[data-include]');
     
-    // Start slideshow if applicable
+    includes.forEach((el) => {
+    const file = el.getAttribute('data-include');
+    const selector = `#${el.id}`;
+    loadComponent(selector, file);
+});
+
+    // Run your other existing functions
+    setupContactForm();
     runSlideshow();
 });
 

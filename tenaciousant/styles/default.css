@@ -46,6 +46,7 @@ a:hover {
 #main-footer {
     position: relative;
     display: block;
+    width: 100%;
 }
 
 header {
@@ -78,7 +79,6 @@ body::after,
 #main-footer::after {
     content: '';
     position: absolute;
-    /* Updated gradient to use 3 colors: Blue -> Purple -> Red */
     background: linear-gradient(var(--angle, 0deg), var(--neon-blue), var(--neon-purple), var(--neon-red));
     animation: flicker 7s infinite alternate;
     z-index: 10;
