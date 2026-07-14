@@ -1,11 +1,34 @@
 :root {
     --bg-color: #121212;
-    --container-bg: #121212; 
+    --container-bg: #1e1e1e; 
     --text-color: #e0e0e0;
     --primary-color: #ff8c00; 
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --font-serif: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --line-height: 1.6;
+}
+
+/* Centers the entire content column on the screen */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Turns sections and articles into distinct visual blocks */
+main section, 
+main article {
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem; /* Space between each block */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Optional: adds a subtle drop shadow */
+}
+
+/* Prevents the last block from having extra empty space below it */
+main section:last-child,
+main article:last-child {
+    margin-bottom: 0;
 }
 
 html {
