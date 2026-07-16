@@ -21,8 +21,8 @@ main article {
     background-color: var(--container-bg);
     padding: 2rem;
     border-radius: 8px;
-    margin-bottom: 2rem; /* Space between each block */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Optional: adds a subtle drop shadow */
+    margin-bottom: 2rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
 }
 
 /* Prevents the last block from having extra empty space below it */
@@ -85,6 +85,25 @@ h3 {
     font-size: 1.5rem;
 }
 
+/* Helper classes for centering specific elements */
+.centered-h3 {
+    text-align: center;
+}
+
+/* Adds the requested gaps on each side of the divider */
+.divider {
+    width: 80%;
+    margin: 2rem auto;
+    border: 0;
+    border-top: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+.quote {
+    text-align: center;
+    margin: 2rem auto;
+    font-style: italic;
+}
+
 p {
     margin-bottom: 1.5rem;
 }
@@ -94,8 +113,9 @@ a {
     text-decoration: none;
 }
 
+/* Fixed: Visited links are now the same color as normal links */
 a:visited {
-    color: #cc4400;
+    color: var(--primary-color);
 }
 
 a:hover {
@@ -109,27 +129,43 @@ img, picture, video, canvas, svg {
     margin: 1.5rem auto; 
 }
 
+/* Image caption formatting */
+figcaption, .caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: -0.5rem; 
+    margin-bottom: 1.5rem;
+}
+
+/* Constrains the footer width to match the main layout edges exactly */
 .footer-container {
     display: flex;
     align-items: center; 
     justify-content: center; 
     gap: 20px; 
-    padding: 20px; 
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto; /* Centers it and adds some breathing room above */
+    box-sizing: border-box; /* CRUCIAL: Forces the 20px padding to stay inside the 90% width */
 }
 
-/* This creates an invisible block on the right to balance the image on the left */
+/* This creates an invisible block on the right to perfectly balance the 80px image on the left */
 .footer-container::after {
     content: "";
-    width: 80px; /* Must perfectly match the .footer-image width */
+    width: 80px; 
     display: block;
+    flex-shrink: 0; /* Prevents the invisible box from squishing on small screens */
 }
 
 .footer-image {
     width: 80px; 
     height: auto; 
-    margin: 0; /* Overrides the global 'margin: 1.5rem auto' to stop it from fighting Flexbox */
+    margin: 0; 
+    flex-shrink: 0; /* Prevents the logo from squishing */
 }
 
 .footer-text {
     text-align: center; 
+    flex-grow: 1; /* Forces the text container to fill the middle evenly */
 }
